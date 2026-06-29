@@ -1,78 +1,82 @@
-# Setup Dhikr Counter
+# Dhikr Counter Setup
 
-Aplikasi **langsung bisa dipakai tanpa konfigurasi apa pun** (mode tamu — data
-tersimpan di `localStorage` perangkat). Login Google + sinkronisasi cloud
-bersifat opsional dan butuh setup Supabase di bawah ini.
+The app **works out of the box with zero configuration** (guest mode — data is
+stored in your device's `localStorage`). Google sign-in + cloud sync are
+optional and require the Supabase setup below.
 
-## Menjalankan secara lokal
+## Running locally
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
-Buka http://localhost:3000 — sudah berfungsi penuh tanpa login.
+Open http://localhost:3000 — fully functional without signing in.
+
+> Using npm or yarn? Swap in `npm install` / `npm run dev` or the yarn
+> equivalents; the lockfile in this repo is for pnpm.
 
 ---
 
-## Mengaktifkan Login Google + Sync (opsional)
+## Enabling Google sign-in + Sync (optional)
 
-### 1. Buat project Supabase
+### 1. Create a Supabase project
 
-1. Masuk ke https://supabase.com → **New project**.
-2. Setelah jadi, buka **Project Settings → API** (atau **Data API**), catat:
+1. Go to https://supabase.com → **New project**.
+2. Once it's ready, open **Project Settings → API** (or **Data API**) and note:
    - **Project URL** → `NEXT_PUBLIC_SUPABASE_URL`
    - **anon public key** → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 
-### 2. Buat tabel & policy
+### 2. Create the table & policies
 
-Buka **SQL Editor → New query**, tempel seluruh isi
-[`supabase/schema.sql`](./supabase/schema.sql), lalu **Run**.
+Open **SQL Editor → New query**, paste the entire contents of
+[`supabase/schema.sql`](./supabase/schema.sql), then click **Run**.
 
-### 3. Siapkan Google OAuth
+### 3. Set up Google OAuth
 
 **a. Google Cloud Console** (https://console.cloud.google.com):
 
-1. Buat / pilih project → **APIs & Services → OAuth consent screen** → isi data dasar.
+1. Create / pick a project → **APIs & Services → OAuth consent screen** → fill in the basics.
 2. **APIs & Services → Credentials → Create Credentials → OAuth client ID**.
 3. Application type: **Web application**.
-4. **Authorized redirect URIs**, tambahkan URL callback dari Supabase:
+4. Under **Authorized redirect URIs**, add the callback URL from Supabase:
    ```
    https://<PROJECT-REF>.supabase.co/auth/v1/callback
    ```
-   (Lihat URL persisnya di langkah berikutnya di dashboard Supabase.)
-5. Simpan, catat **Client ID** dan **Client secret**.
+   (You'll find the exact URL in the next step in the Supabase dashboard.)
+5. Save, and note the **Client ID** and **Client secret**.
 
 **b. Supabase Dashboard:**
 
-1. **Authentication → Providers → Google** → aktifkan.
-2. Tempel **Client ID** & **Client secret** dari Google, lalu **Save**.
-   Di halaman ini juga tertera *Callback URL* yang harus dipakai di langkah 4a.
+1. **Authentication → Providers → Google** → enable it.
+2. Paste the **Client ID** & **Client secret** from Google, then **Save**.
+   This page also shows the *Callback URL* you need to use in step 4a.
 3. **Authentication → URL Configuration**:
-   - **Site URL**: `http://localhost:3000` (dev) atau domain produksimu.
-   - **Redirect URLs**, tambahkan:
+   - **Site URL**: `http://localhost:3000` (dev) or your production domain.
+   - Under **Redirect URLs**, add:
      ```
      http://localhost:3000/auth/callback
-     https://<domain-produksi>/auth/callback
+     https://<production-domain>/auth/callback
      ```
 
-### 4. Isi environment variable
+### 4. Set the environment variables
 
 ```bash
 cp .env.local.example .env.local
 ```
 
-Isi `NEXT_PUBLIC_SUPABASE_URL` dan `NEXT_PUBLIC_SUPABASE_ANON_KEY` dari langkah 1,
-lalu jalankan ulang `npm run dev`.
+Fill in `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` from
+step 1, then restart `pnpm dev`.
 
-Setelah ini tombol **Masuk** akan muncul di beranda. Saat login pertama, data
-dzikir yang sudah tersimpan di perangkat otomatis disinkronkan ke akunmu.
+After this, a **Sign in** button appears on the home page. On your first
+sign-in, the dhikr data already stored on your device is automatically synced
+to your account.
 
 ---
 
-## Build produksi
+## Production build
 
 ```bash
-npm run build
-npm start
+pnpm build
+pnpm start
 ```

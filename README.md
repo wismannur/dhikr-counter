@@ -1,97 +1,108 @@
-# Dhikr Counter — Tasbih Digital
+# Dhikr Counter — Digital Tasbih
 
-Aplikasi penghitung dzikir (tasbih digital) berbasis web. Pilih dzikir, lalu
-hitung dengan **ketukan layar atau keyboard**, lengkap dengan **target**,
-**feedback getar + suara** (berguna saat berdzikir dengan mata tertutup), dan
-**laporan progres harian, mingguan, hingga bulanan**.
+A web-based dhikr counter (digital tasbih). Pick a dhikr, then count it with
+**screen taps or your keyboard**, complete with **targets**, **haptic + sound
+feedback** (handy for counting with your eyes closed), and **daily, weekly, and
+monthly progress reports**.
 
-Dibangun dengan **Next.js 16**, **React 19**, **Tailwind CSS v4**, dan
-**Supabase** (opsional, untuk login & sinkronisasi).
+Built with **Next.js 16**, **React 19** (React Compiler enabled), **Tailwind
+CSS v4**, **next-intl**, and **Supabase** (optional, for sign-in & sync).
 
-## Fitur
+## Features
 
-- 🕌 **16 dzikir & doa preset berkategori** (tasbih harian, Ramadan, rezeki,
-  doa Al-Qur'an) dengan teks Arab, latin, arti, dan sumber.
-- 🎯 **Target hitungan** (33 / 100 / 1000 / kustom) dengan progress ring dan
-  penanda saat target/kelipatannya tercapai.
-- 👆 **Banyak cara menghitung — semua menambah +1**: ketuk layar, panah
-  (↑ ↓ ← →), `+`, Spasi, atau Enter.
-- 🔔 **Feedback taktil & audio** tiap hitungan dan saat target tercapai
-  (bisa dimatikan).
-- ↩️ **Undo & Reset** untuk koreksi salah pencet (reset tidak menghapus laporan).
-- 📊 **Laporan** harian, mingguan, bulanan: tren + rincian per dzikir.
-- 📴 **Mode tamu** — langsung pakai tanpa login, data tersimpan di perangkat.
-- 🔐 **Login Google + sinkronisasi cloud** (opsional via Supabase). Data lokal
-  otomatis disinkronkan saat login pertama.
-- 📱 **PWA** — bisa di-_install_ ke layar utama dan dipakai offline.
-- 🌗 **Mode terang & gelap** (mengikuti sistem, bisa di-_toggle_).
-- 🌍 **Dwibahasa (i18n)** — English sebagai default di `/`, Indonesia di `/id`
-  (via next-intl, tanpa prefix `/en`). Termasuk arti dzikir & semua teks UI.
+- 🕌 **16 preset dhikr & du'a across categories** (daily tasbih, Ramadan,
+  provision/rizq, Qur'anic du'a) with Arabic text, transliteration, meaning, and
+  source.
+- 🎯 **Count targets** (33 / 100 / 1000 / custom) with a progress ring, round
+  tracking, and a marker each time the target or one of its multiples is reached.
+- 👆 **Many ways to count — all add +1**: tap the screen, arrow keys
+  (↑ ↓ ← →), `+`, `=`, Space, or Enter.
+- 🔔 **Haptic & audio feedback** on every count and when a target is reached
+  (can be turned off).
+- ↩️ **Undo & Reset** to fix mis-taps (Reset does not erase your reports).
+- 📊 **Reports** — daily, weekly, monthly: trends plus a per-dhikr breakdown.
+- 📴 **Guest mode** — use it instantly without signing in; data is stored on
+  your device.
+- 🔐 **Google sign-in + cloud sync** (optional, via Supabase). Local data is
+  automatically synced on your first sign-in.
+- 📱 **PWA** — installable to your home screen and usable offline.
+- 🌗 **Light & dark mode** (follows the system, with a manual toggle).
+- 🌍 **Bilingual (i18n)** — English as the default at `/`, Indonesian at `/id`
+  (via next-intl, no `/en` prefix). Covers dhikr meanings and all UI text.
 
-## Mulai cepat
-
-```bash
-npm install
-npm run dev
-```
-
-Buka http://localhost:3000 (English, default) atau http://localhost:3000/id
-(Indonesia) — **sudah berfungsi penuh tanpa konfigurasi apa pun**.
-
-## Login Google + Sinkronisasi (opsional)
-
-Fitur login bersifat opsional dan butuh project Supabase + Google OAuth.
-Panduan langkah demi langkah ada di **[SETUP.md](./SETUP.md)**.
-
-Singkatnya:
-
-1. Buat project Supabase, jalankan [`supabase/schema.sql`](./supabase/schema.sql).
-2. Aktifkan provider Google di Supabase + buat OAuth client di Google Cloud.
-3. Salin `.env.local.example` → `.env.local`, isi URL & anon key.
-
-## Build produksi
+## Quick start
 
 ```bash
-npm run build
-npm start
+pnpm install
+pnpm dev
 ```
 
-## Struktur
+Open http://localhost:3000 (English, default) or http://localhost:3000/id
+(Indonesian) — **fully functional with zero configuration**.
+
+> Using npm or yarn? Swap in `npm install` / `npm run dev` or the yarn
+> equivalents; the lockfile in this repo is for pnpm.
+
+## Google sign-in + Sync (optional)
+
+Sign-in is optional and requires a Supabase project + Google OAuth. A
+step-by-step guide is in **[SETUP.md](./SETUP.md)**.
+
+In short:
+
+1. Create a Supabase project and run [`supabase/schema.sql`](./supabase/schema.sql).
+2. Enable the Google provider in Supabase + create an OAuth client in Google Cloud.
+3. Copy `.env.local.example` → `.env.local` and fill in the URL & anon key.
+
+## Production build
+
+```bash
+pnpm build
+pnpm start
+```
+
+## Structure
 
 ```
 app/
-  [locale]/             Semua halaman (en default tanpa prefix, /id untuk ID)
+  [locale]/             All pages (en default with no prefix, /id for ID)
     layout.tsx            Root layout: html lang, NextIntlClientProvider, fonts
-    (marketing)/          Halaman publik (layout SiteHeader/Footer):
+    (marketing)/          Public pages (SiteHeader/Footer layout):
       page.tsx              landing (/)
       login/ about/ privacy/ terms/ guide/ contact/ faq/
-    app/page.tsx          Aplikasi — pemilih dzikir (/app)
-    count/[id]/page.tsx   Layar hitung
-    reports/page.tsx      Laporan
-    auth/error/page.tsx   Halaman gagal login
-    not-found.tsx         Halaman 404 bertema
-  auth/callback/route   Callback OAuth Supabase (tidak dilokalkan)
-  manifest.ts · sitemap.ts · robots.ts · opengraph-image.tsx   (root, global)
+    app/page.tsx          App — dhikr picker (/app)
+    count/[id]/page.tsx   Counting screen
+    reports/page.tsx      Reports
+    auth/error/page.tsx   Sign-in error page
+    not-found.tsx         Themed 404 page
+  auth/callback/route   Supabase OAuth callback (not localized)
+  globals.css · manifest.ts · sitemap.ts · robots.ts · opengraph-image.tsx
 i18n/                   routing (en/id, as-needed), request, navigation
-messages/               en.json · id.json (semua teks UI + konten halaman)
-components/             Counter, Reports, SiteHeader/Footer, LoginForm,
-                        LocaleSwitcher, AuthButton, dll.
+messages/               en.json · id.json (all UI text + page content)
+components/             Counter, ProgressRing, Reports, SiteHeader/Footer,
+                        LoginForm, AuthButton, LocaleSwitcher, ThemeToggle,
+                        InstallPrompt, ServiceWorkerRegister, SyncManager, icons
 lib/
-  dhikr.ts             Data preset dzikir (arti per-locale) + pick()
-  store.ts              State + persistensi localStorage
-  reports.ts            Agregasi laporan
-  date.ts               Format tanggal locale-aware (Intl)
-  supabase/             Client, server, auth, config
-  sync.ts               Sinkronisasi dua arah ke Supabase
-proxy.ts                Middleware Next 16: i18n next-intl + sesi Supabase
-supabase/schema.sql     Skema tabel + RLS
+  dhikr.ts             Preset dhikr data (per-locale meanings) + pick()
+  store.ts              State + localStorage persistence
+  reports.ts            Report aggregation
+  feedback.ts           Haptic + audio feedback (Web Audio / Vibration API)
+  date.ts               Locale-aware date formatting (Intl)
+  site.ts · types.ts    Site metadata + shared types
+  supabase/             Client, server, config, useAuth
+  sync.ts               Two-way sync with Supabase
+proxy.ts                Next 16 middleware: next-intl i18n + Supabase session
+supabase/
+  schema.sql            Table schema + RLS
+  migrations/           SQL migrations
+public/                 sw.js (service worker), icon.svg, icons/
 ```
 
-## Catatan teknis
+## Technical notes
 
-- **Mode tamu vs cloud**: tanpa env Supabase, seluruh fitur jalan dari
-  `localStorage`. Dengan env, muncul tombol **Masuk** dan data tersinkron.
-- **Model data**: agregat harian per dzikir — `dhikr_logs(user_id, dhikr_id,
-  log_date, count)` — ringan dan mudah dijumlahkan untuk laporan.
-- Dibuat untuk **Next.js 16** (App Router, Turbopack, async request APIs,
-  `proxy.ts`).
+- **Guest vs cloud**: without Supabase env vars, everything runs from
+  `localStorage`. With them set, a **Sign in** button appears and data syncs.
+- **Data model**: a daily per-dhikr aggregate — `dhikr_logs(user_id, dhikr_id,
+  log_date, count)` — lightweight and easy to sum up for reports.
+- Built for **Next.js 16** (App Router, Turbopack, async request APIs,
+  `proxy.ts`) with the **React Compiler** enabled.

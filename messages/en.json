@@ -1,0 +1,245 @@
+{
+  "common": {
+    "appName": "Dhikr Counter",
+    "tagline": "Digital tasbih"
+  },
+  "nav": {
+    "about": "About",
+    "guide": "Guide",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "signIn": "Sign in",
+    "openApp": "Open app"
+  },
+  "footer": {
+    "tagline": "A digital tasbih to count your dhikr with targets and progress reports. May it be a steadfast deed.",
+    "copyright": "Built for good.",
+    "openApp": "Open app",
+    "about": "About",
+    "guide": "Guide",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact",
+    "faq": "FAQ"
+  },
+  "theme": {
+    "toggle": "Toggle light/dark theme"
+  },
+  "install": {
+    "title": "Install the app",
+    "desc": "Quick access & works offline.",
+    "install": "Install",
+    "close": "Close"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "account": "Account"
+  },
+  "home": {
+    "badge": "Digital tasbih · free · works offline",
+    "titleLine1": "Count your dhikr,",
+    "titleLine2": "stay steadfast.",
+    "subtitle": "A digital tasbih to count dhikr and du'as with targets, gentle haptic & sound feedback, and daily to monthly progress reports.",
+    "ctaStart": "Start dhikr",
+    "ctaGoogle": "Sign in with Google",
+    "note": "No sign-up needed — your data stays safe on your device.",
+    "mockupCaption": "Round 1 · Today 27",
+    "featuresTitle": "Everything you need",
+    "featuresSubtitle": "Simple, focused, and designed to make dhikr feel light and trackable.",
+    "features": [
+      { "title": "Flexible counting", "desc": "Tap the screen, press arrows, space, enter, or the + key. They all add one." },
+      { "title": "Targets & progress", "desc": "Set a target (33, 100, or custom) and watch the ring fill each round." },
+      { "title": "Sound & haptics", "desc": "Gentle feedback on each count and when a target is reached — easy to use with eyes closed." },
+      { "title": "Progress reports", "desc": "Track your dhikr daily, weekly, and monthly, with a per-dhikr breakdown." },
+      { "title": "Sign in & sync", "desc": "Sign in with Google so your data is saved and synced across devices." },
+      { "title": "Offline & dark mode", "desc": "Installable as an app (PWA), works without internet, with dark mode." }
+    ],
+    "collectionTitle": "Curated dhikr & du'as included",
+    "collectionSubtitle": "From daily tasbih to du'as from hadith and the Qur'an, complete with Arabic, transliteration, meaning, and source.",
+    "collectionCount": "{count} dhikr",
+    "collectionMore": "+{count} more",
+    "stepsTitle": "How it works",
+    "steps": [
+      { "title": "Pick a dhikr or du'a", "desc": "From daily tasbih, Ramadan du'as, provision, to verses of the Qur'an." },
+      { "title": "Count to your target", "desc": "Tap or use the keyboard. The progress ring guides each round." },
+      { "title": "Track your progress", "desc": "View daily, weekly, and monthly reports to stay steadfast." }
+    ],
+    "ctaHeading": "Start your dhikr today",
+    "ctaSubtitle": "Free, no ads, and ready to use without signing up.",
+    "ctaButton": "Open app"
+  },
+  "app": {
+    "brand": "Dhikr",
+    "brandSub": "Digital tasbih",
+    "todayLabel": "dhikr today",
+    "reportsAria": "Reports",
+    "target": "Target {count}",
+    "todayCount": "Today {count}",
+    "guestNote": "Works without signing in — your data is stored on this device."
+  },
+  "counter": {
+    "round": "Round",
+    "completed": "completed {count}×",
+    "today": "Today",
+    "tapHint": "Tap anywhere · or arrows / space / +",
+    "targetReached": "Target reached — MashaAllah",
+    "undo": "Undo",
+    "reset": "Reset",
+    "target": "Target:",
+    "other": "Other",
+    "addAria": "Add a count for {name}",
+    "backAria": "Back",
+    "soundAria": "Sound",
+    "vibrateAria": "Vibration",
+    "notFoundTitle": "Dhikr not found",
+    "notFoundDesc": "The link may be wrong. Please pick a dhikr from the app.",
+    "notFoundCta": "Go to app",
+    "customTargetAria": "Custom target"
+  },
+  "reports": {
+    "title": "Reports",
+    "back": "Back",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "totalThisPeriod": "total dhikr this {period}",
+    "vsLast": "vs last {period}",
+    "trend": "{period} trend",
+    "breakdown": "Breakdown by dhikr",
+    "empty": "No dhikr yet this {period}.",
+    "periodDay": "day",
+    "periodWeek": "week",
+    "periodMonth": "month",
+    "trendDaily": "daily",
+    "trendWeekly": "weekly",
+    "trendMonthly": "monthly"
+  },
+  "login": {
+    "unavailableTitle": "Sign-in unavailable",
+    "unavailableDesc": "Accounts aren't enabled on this installation. No worries — you can still use every feature without signing in; your data stays on your device.",
+    "continueGuest": "Continue without signing in",
+    "loading": "Loading…",
+    "signedInTitle": "You're signed in",
+    "signedInAs": "as {name}",
+    "openApp": "Open app",
+    "title": "Sign in to Dhikr",
+    "subtitle": "Save and sync your dhikr progress.",
+    "benefits": [
+      "Your dhikr data is saved & backed up to your account",
+      "Automatically synced across all your devices",
+      "Continue your progress from anywhere"
+    ],
+    "google": "Sign in with Google",
+    "googleBusy": "Redirecting…",
+    "or": "or",
+    "guestNote": "Without signing in, your data still stays on this device."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "message": "The link may be wrong, or the page has moved.",
+    "home": "Home",
+    "openApp": "Open app"
+  },
+  "categories": {
+    "daily": "Daily Tasbih & Dhikr",
+    "ramadan": "Ramadan",
+    "rizq": "Provision (Rizq)",
+    "quran": "Du'a from the Qur'an"
+  },
+  "about": {
+    "title": "About Dhikr Counter",
+    "subtitle": "A simple digital tasbih to help you stay steadfast in dhikr.",
+    "intro": "Dhikr Counter was built for one purpose: to make counting dhikr and du'as calm and effortless, then help you track your progress over time. No ads, no fuss, and ready to use without an account.",
+    "featuresHeading": "Key features",
+    "features": [
+      "Count by tapping the screen or using the keyboard (everything adds +1).",
+      "Targets with a progress ring and a marker when reached.",
+      "Sound & haptic feedback — comfortable even with eyes closed.",
+      "Daily, weekly, and monthly progress reports.",
+      "Installable as an app (PWA) and usable offline.",
+      "Optional Google sign-in to sync data across devices."
+    ],
+    "dhikrHeading": "Dhikr & du'as",
+    "dhikrBody": "The app includes a curated collection of dhikr and du'as grouped by category: daily tasbih, Ramadan du'as, provision du'as, and du'as from the Qur'an. Each entry shows the Arabic text, transliteration, meaning, and its source (e.g. Narrated by Tirmidhi or a verse reference).",
+    "dhikrNote": "Translations are kept concise for convenience. For deeper meaning and authenticity, please refer to the mushaf, hadith collections, and trustworthy scholars.",
+    "privacyHeading": "Privacy & data",
+    "privacyBody": "Without signing in, all data stays on your device. When you sign in, your data is stored securely in your account and only accessible by you.",
+    "privacyLink": "Read the Privacy Policy",
+    "techHeading": "Technology",
+    "techBody": "Built with Next.js, React, and Tailwind CSS, with Supabase for authentication and storage, plus PWA support for installation and offline use."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: 28 June 2026",
+    "intro": "Your privacy matters. This page explains what data Dhikr Counter collects, how it's used, and the choices you have.",
+    "sections": [
+      { "h": "1. Data we collect", "p": ["Without signing in (guest mode): all data — your dhikr selections, daily counts, and settings — is stored locally on your device (localStorage). We never receive it.", "With Google sign-in: we store basic profile info from Google (name, email, profile photo) and your daily dhikr counts (dhikr type, date, and amount)."] },
+      { "h": "2. How data is stored", "p": ["Account data is stored in a Supabase (PostgreSQL) database with Row Level Security, so each user can only access their own data. Guest data never leaves your device unless you choose to sign in (at which point local data is synced to your account)."] },
+      { "h": "3. How data is used", "p": ["Data is used only to run the app's features: showing counts, building progress reports, and syncing across devices. We do not sell, rent, or use your data for advertising."] },
+      { "h": "4. Third-party services", "p": ["Google — for sign-in (OAuth). We only receive the basic profile you consent to.", "Supabase — for authentication and data storage."] },
+      { "h": "5. Cookies", "p": ["We only use cookies necessary to keep your session active. There are no advertising or tracking cookies."] },
+      { "h": "6. Storage & deletion", "p": ["You can delete guest data anytime by clearing your browser's site data. For account data, you can sign out to end your session, or request deletion of all account data via the contact below."] },
+      { "h": "7. Your rights", "p": ["You may access, correct, and request deletion of your personal data. Contact us for such requests."] },
+      { "h": "8. Changes", "p": ["This policy may be updated from time to time. Changes will be reflected in the “last updated” date above."] },
+      { "h": "9. Contact", "p": ["For privacy questions, contact: [your contact email]."] }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "updated": "Last updated: 28 June 2026",
+    "sections": [
+      { "h": "1. Acceptance", "p": ["By using Dhikr Counter, you agree to these terms. If you do not agree, please do not use the app."] },
+      { "h": "2. About the service", "p": ["Dhikr Counter is a free app for counting dhikr and du'as and tracking progress. The service is provided at no cost."] },
+      { "h": "3. Religious content", "p": ["Arabic text, transliteration, translations, and source notes are provided for convenience and personal worship. While we strive for accuracy, please verify against the mushaf, hadith collections, and trustworthy scholars. This app is not a substitute for religious knowledge."] },
+      { "h": "4. Accounts & guest mode", "p": ["You may use the app without an account (data stored on device) or sign in with Google to sync. You are responsible for the security of the Google account you use."] },
+      { "h": "5. Acceptable use", "p": ["You agree not to misuse the service, including attempts to disrupt, hack, or access other users' data."] },
+      { "h": "6. No warranty", "p": ["The service is provided “as is” without any warranty. We do not guarantee it will always be uninterrupted or error-free."] },
+      { "h": "7. Limitation of liability", "p": ["To the extent permitted by law, we are not liable for any loss arising from the use of or inability to use the app, including data loss."] },
+      { "h": "8. Changes", "p": ["These terms may change at any time. Continued use after changes means you accept the updated terms."] },
+      { "h": "9. Contact", "p": ["Questions about these terms? See also the Privacy Policy or contact: [your contact email]."] }
+    ]
+  },
+  "guide": {
+    "title": "How to use",
+    "subtitle": "Everything you need to start your dhikr.",
+    "keys": ["Tap screen", "↑", "↓", "←", "→", "+", "Space", "Enter"],
+    "sections": [
+      { "h": "1. Pick a dhikr", "p": ["Open the app, then choose a dhikr or du'a from the available categories (daily tasbih, Ramadan, provision, or Qur'an du'as). You'll enter the counting screen."] },
+      { "h": "2. Counting", "p": ["Every method below adds one count — pick whichever is most comfortable.", "Because you can use the keyboard and tap anywhere on the screen, you can keep counting with focus even with your eyes closed."] },
+      { "h": "3. Targets & rounds", "p": ["Each dhikr has a target (e.g. 33 or 100). The progress ring fills as you count, and a marker appears when the target is reached. Counting can continue into the next round. Change the target with the 33 / 100 / 1000 / Other buttons at the bottom."] },
+      { "h": "4. Undo & reset", "p": ["Mis-tapped? Press Undo to subtract one. The Reset button returns the session count to zero — don't worry, this does not erase the total already recorded in your reports."] },
+      { "h": "5. Sound & haptics", "p": ["There's sound and vibration feedback on each count and when a target is reached. Toggle them with the icons at the top right of the counting screen."] },
+      { "h": "6. Reports", "p": ["Open Reports to see daily, weekly, and monthly progress, complete with a trend chart and a per-dhikr breakdown."] },
+      { "h": "7. Install as an app (offline)", "p": ["Dhikr Counter is a PWA — installable to your phone or desktop home screen. When the “Install app” banner appears, tap Install; or use your browser menu (“Add to Home Screen” / “Install”). Once installed, it works without internet."] },
+      { "h": "8. Sign in & sync", "p": ["Without signing in, your data stays on your device. To sync across devices, sign in with Google. On first sign-in, your local data is merged and synced to your account."] }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Quick answers about Dhikr Counter.",
+    "items": [
+      { "q": "Is it free?", "a": "Yes, completely free with no ads." },
+      { "q": "Do I need to sign in?", "a": "No. You can use every feature without an account — your data is stored on your device. Sign in only if you want to sync across devices." },
+      { "q": "How is my data kept private?", "a": "Guest data stays in your browser. Account data is protected by Row Level Security so only you can access it. We never sell your data. See the Privacy Policy for details." },
+      { "q": "Does it work offline?", "a": "Yes. Install it as an app (PWA) and it works without an internet connection." },
+      { "q": "How do I count?", "a": "Tap anywhere on the counting screen, or use the arrow keys, space, enter, or the + key — they all add one." },
+      { "q": "Are the texts and translations accurate?", "a": "We strive for accuracy and include sources, but translations are concise for convenience. Please verify with the mushaf, hadith collections, and trustworthy scholars." },
+      { "q": "Can I change the target count?", "a": "Yes. On the counting screen choose 33, 100, 1000, or set a custom target." }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "We'd love to hear from you.",
+    "intro": "Questions, feedback, or found an issue? Reach out — and please verify any religious content with trustworthy sources too.",
+    "emailLabel": "Email",
+    "email": "[your contact email]",
+    "emailCta": "Send email",
+    "responseNote": "We'll do our best to reply, insha'Allah."
+  },
+  "authError": {
+    "title": "Sign-in failed",
+    "desc": "Something went wrong during sign-in. Please try again. Your data on this device is safe.",
+    "back": "Back to home"
+  }
+}

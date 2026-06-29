@@ -1,26 +1,212 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  Dhikr Counter — tema spiritual: emerald + emas, tenang, nyaman dipakai
+  saat malam (dark mode). Token warna dipisah dari @theme inline supaya
+  dark mode lewat CSS variable tetap jalan.
+*/
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --bg: #f6f4ec;
+  --bg-glow: rgba(15, 122, 90, 0.08);
+  --surface: #ffffff;
+  --surface-2: #f0ece1;
+  --fg: #1c2a24;
+  --muted: #66766c;
+  --border: #e4ded0;
+  --primary: #0f7a5a;
+  --primary-strong: #0b6048;
+  --primary-fg: #ffffff;
+  --accent: #c19a27;
+  --accent-soft: #f3e6bf;
+  --danger: #b4452f;
+  --ring: rgba(15, 122, 90, 0.35);
+  --track: #e7e2d4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: #080d0b;
+    --bg-glow: rgba(31, 157, 118, 0.12);
+    --surface: #101714;
+    --surface-2: #18211d;
+    --fg: #e9efea;
+    --muted: #87998f;
+    --border: #1f2a25;
+    --primary: #1f9d76;
+    --primary-strong: #25b487;
+    --primary-fg: #04130d;
+    --accent: #e3bb3f;
+    --accent-soft: #2a2616;
+    --danger: #e0795f;
+    --ring: rgba(37, 180, 135, 0.4);
+    --track: #1d2823;
   }
 }
 
+/* Manual override (theme toggle) menang atas preferensi sistem */
+:root[data-theme="light"] {
+  --bg: #f6f4ec;
+  --bg-glow: rgba(15, 122, 90, 0.08);
+  --surface: #ffffff;
+  --surface-2: #f0ece1;
+  --fg: #1c2a24;
+  --muted: #66766c;
+  --border: #e4ded0;
+  --primary: #0f7a5a;
+  --primary-strong: #0b6048;
+  --primary-fg: #ffffff;
+  --accent: #c19a27;
+  --accent-soft: #f3e6bf;
+  --danger: #b4452f;
+  --ring: rgba(15, 122, 90, 0.35);
+  --track: #e7e2d4;
+}
+
+:root[data-theme="dark"] {
+  --bg: #080d0b;
+  --bg-glow: rgba(31, 157, 118, 0.12);
+  --surface: #101714;
+  --surface-2: #18211d;
+  --fg: #e9efea;
+  --muted: #87998f;
+  --border: #1f2a25;
+  --primary: #1f9d76;
+  --primary-strong: #25b487;
+  --primary-fg: #04130d;
+  --accent: #e3bb3f;
+  --accent-soft: #2a2616;
+  --danger: #e0795f;
+  --ring: rgba(37, 180, 135, 0.4);
+  --track: #1d2823;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-fg: var(--primary-fg);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-danger: var(--danger);
+  --color-track: var(--track);
+  --font-sans: var(--font-geist-sans);
+  --font-arabic: var(--font-amiri);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  background-image: radial-gradient(
+      80% 60% at 50% -10%,
+      var(--bg-glow),
+      transparent 70%
+    );
+  background-attachment: fixed;
+  color: var(--fg);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  /* aman di area notch / home indicator saat mode PWA */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Cegah seleksi teks tak sengaja saat tap cepat menghitung */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Arabic harus selalu kanan-ke-kiri */
+.arabic {
+  font-family: var(--font-arabic), serif;
+  direction: rtl;
+  line-height: 1.9;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(0.94); }
+  100% { transform: scale(1); }
+}
+.animate-pop {
+  animation: pop 0.18s ease-out;
+}
+
+@keyframes celebrate {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.12); }
+  60% { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+.animate-celebrate {
+  animation: celebrate 0.5s ease-out;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.3s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pop,
+  .animate-celebrate,
+  .animate-fade-up {
+    animation: none;
+  }
+}
+
+/* Tipografi untuk halaman konten (About, Privacy, Terms, Panduan) */
+.prose-content {
+  color: var(--fg);
+  line-height: 1.75;
+}
+.prose-content h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--fg);
+}
+.prose-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+  color: var(--fg);
+}
+.prose-content p {
+  margin: 0.75rem 0;
+  color: var(--muted);
+}
+.prose-content ul {
+  margin: 0.75rem 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+  color: var(--muted);
+}
+.prose-content li {
+  margin: 0.35rem 0;
+}
+.prose-content a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.prose-content strong {
+  color: var(--fg);
+  font-weight: 600;
 }

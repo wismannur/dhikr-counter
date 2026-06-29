@@ -1,0 +1,245 @@
+{
+  "common": {
+    "appName": "Dhikr Counter",
+    "tagline": "Tasbih digital"
+  },
+  "nav": {
+    "about": "Tentang",
+    "guide": "Panduan",
+    "contact": "Kontak",
+    "faq": "FAQ",
+    "signIn": "Masuk",
+    "openApp": "Buka Aplikasi"
+  },
+  "footer": {
+    "tagline": "Tasbih digital untuk menghitung dzikir dengan target dan laporan progres. Semoga menjadi amal yang istiqamah.",
+    "copyright": "Dibuat untuk kebaikan.",
+    "openApp": "Buka Aplikasi",
+    "about": "Tentang",
+    "guide": "Panduan",
+    "privacy": "Privasi",
+    "terms": "Ketentuan",
+    "contact": "Kontak",
+    "faq": "FAQ"
+  },
+  "theme": {
+    "toggle": "Ganti tema terang/gelap"
+  },
+  "install": {
+    "title": "Pasang aplikasi",
+    "desc": "Akses cepat & bisa dipakai offline.",
+    "install": "Pasang",
+    "close": "Tutup"
+  },
+  "auth": {
+    "signIn": "Masuk",
+    "signOut": "Keluar",
+    "account": "Akun"
+  },
+  "home": {
+    "badge": "Tasbih digital · gratis · bisa offline",
+    "titleLine1": "Hitung dzikirmu,",
+    "titleLine2": "jaga istiqamah.",
+    "subtitle": "Tasbih digital untuk menghitung dzikir dan doa dengan target, umpan balik getar & suara, serta laporan progres harian hingga bulanan.",
+    "ctaStart": "Mulai Berdzikir",
+    "ctaGoogle": "Masuk dengan Google",
+    "note": "Tanpa daftar pun bisa langsung pakai — datamu aman di perangkat.",
+    "mockupCaption": "Putaran 1 · Hari ini 27",
+    "featuresTitle": "Semua yang kamu butuhkan",
+    "featuresSubtitle": "Sederhana, fokus, dan dirancang agar dzikir terasa ringan dan terpantau.",
+    "features": [
+      { "title": "Hitung fleksibel", "desc": "Ketuk layar, tekan panah, spasi, enter, atau tombol +. Semua menambah satu." },
+      { "title": "Target & progres", "desc": "Pasang target (33, 100, atau bebas) dan lihat lingkaran progres terisi tiap putaran." },
+      { "title": "Getar & suara", "desc": "Umpan balik halus tiap hitungan dan saat target tercapai — nyaman dipakai sambil merem." },
+      { "title": "Laporan progres", "desc": "Pantau dzikir harian, mingguan, dan bulanan, lengkap dengan rincian per dzikir." },
+      { "title": "Login & sinkron", "desc": "Masuk dengan Google agar datamu tersimpan dan tersinkron di semua perangkat." },
+      { "title": "Offline & dark mode", "desc": "Bisa dipasang sebagai aplikasi (PWA), jalan tanpa internet, dengan mode gelap." }
+    ],
+    "collectionTitle": "Dilengkapi dzikir & doa pilihan",
+    "collectionSubtitle": "Dari tasbih harian hingga doa dari hadis dan Al-Qur'an, lengkap dengan teks Arab, latin, arti, dan sumbernya.",
+    "collectionCount": "{count} dzikir",
+    "collectionMore": "+{count} lainnya",
+    "stepsTitle": "Cara kerjanya",
+    "steps": [
+      { "title": "Pilih dzikir atau doa", "desc": "Dari tasbih harian, doa Ramadan, rezeki, hingga ayat Al-Qur'an." },
+      { "title": "Hitung sampai target", "desc": "Ketuk atau pakai keyboard. Lingkaran progres memandu tiap putaran." },
+      { "title": "Pantau progresmu", "desc": "Lihat laporan harian, mingguan, dan bulanan agar tetap istiqamah." }
+    ],
+    "ctaHeading": "Mulai dzikirmu hari ini",
+    "ctaSubtitle": "Gratis, tanpa iklan, dan bisa langsung dipakai tanpa daftar.",
+    "ctaButton": "Buka Aplikasi"
+  },
+  "app": {
+    "brand": "Dhikr",
+    "brandSub": "Tasbih digital",
+    "todayLabel": "dzikir hari ini",
+    "reportsAria": "Laporan",
+    "target": "Target {count}",
+    "todayCount": "Hari ini {count}",
+    "guestNote": "Dipakai tanpa login pun bisa — datamu tersimpan di perangkat ini."
+  },
+  "counter": {
+    "round": "Putaran",
+    "completed": "selesai {count}×",
+    "today": "Hari ini",
+    "tapHint": "Ketuk di mana saja · atau panah / spasi / +",
+    "targetReached": "Target tercapai — MasyaAllah",
+    "undo": "Undo",
+    "reset": "Reset",
+    "target": "Target:",
+    "other": "Lainnya",
+    "addAria": "Tambah hitungan {name}",
+    "backAria": "Kembali",
+    "soundAria": "Suara",
+    "vibrateAria": "Getar",
+    "notFoundTitle": "Dzikir tidak ditemukan",
+    "notFoundDesc": "Mungkin tautannya keliru. Silakan pilih dzikir dari aplikasi.",
+    "notFoundCta": "Ke Aplikasi",
+    "customTargetAria": "Target khusus"
+  },
+  "reports": {
+    "title": "Laporan",
+    "back": "Kembali",
+    "daily": "Harian",
+    "weekly": "Mingguan",
+    "monthly": "Bulanan",
+    "totalThisPeriod": "total dzikir {period} ini",
+    "vsLast": "dibanding {period} lalu",
+    "trend": "Tren {period}",
+    "breakdown": "Rincian per dzikir",
+    "empty": "Belum ada dzikir pada {period} ini.",
+    "periodDay": "hari",
+    "periodWeek": "minggu",
+    "periodMonth": "bulan",
+    "trendDaily": "harian",
+    "trendWeekly": "mingguan",
+    "trendMonthly": "bulanan"
+  },
+  "login": {
+    "unavailableTitle": "Login belum tersedia",
+    "unavailableDesc": "Fitur akun belum diaktifkan pada instalasi ini. Tapi tenang, kamu tetap bisa memakai semua fitur tanpa login — datamu tersimpan di perangkat.",
+    "continueGuest": "Lanjut tanpa login",
+    "loading": "Memuat…",
+    "signedInTitle": "Kamu sudah masuk",
+    "signedInAs": "sebagai {name}",
+    "openApp": "Buka Aplikasi",
+    "title": "Masuk ke Dhikr",
+    "subtitle": "Simpan dan sinkronkan progres dzikirmu.",
+    "benefits": [
+      "Data dzikir tersimpan & ter-backup di akunmu",
+      "Tersinkron otomatis di semua perangkat",
+      "Lanjutkan progres dari mana saja"
+    ],
+    "google": "Masuk dengan Google",
+    "googleBusy": "Mengarahkan…",
+    "or": "atau",
+    "guestNote": "Tanpa login, datamu tetap tersimpan di perangkat ini."
+  },
+  "notFound": {
+    "title": "Halaman tidak ditemukan",
+    "message": "Mungkin tautannya keliru atau halaman sudah dipindahkan.",
+    "home": "Beranda",
+    "openApp": "Buka Aplikasi"
+  },
+  "categories": {
+    "daily": "Tasbih & Dzikir Harian",
+    "ramadan": "Ramadan",
+    "rizq": "Rezeki",
+    "quran": "Doa dari Al-Qur'an"
+  },
+  "about": {
+    "title": "Tentang Dhikr Counter",
+    "subtitle": "Tasbih digital sederhana untuk membantu istiqamah berdzikir.",
+    "intro": "Dhikr Counter dibuat untuk satu tujuan: memudahkanmu menghitung dzikir dan doa dengan tenang, lalu memantau progresnya dari waktu ke waktu. Tanpa iklan, tidak ribet, dan bisa langsung dipakai tanpa membuat akun.",
+    "featuresHeading": "Fitur utama",
+    "features": [
+      "Menghitung dengan ketukan layar maupun keyboard (semua menambah +1).",
+      "Target hitungan dengan lingkaran progres dan penanda saat tercapai.",
+      "Umpan balik getar & suara — nyaman dipakai sambil memejamkan mata.",
+      "Laporan progres harian, mingguan, dan bulanan.",
+      "Bisa dipasang sebagai aplikasi (PWA) dan dipakai offline.",
+      "Login Google opsional untuk menyinkronkan data antar-perangkat."
+    ],
+    "dhikrHeading": "Dzikir & doa",
+    "dhikrBody": "Aplikasi ini dilengkapi koleksi dzikir dan doa pilihan yang dikelompokkan per kategori: tasbih & dzikir harian, doa Ramadan, doa rezeki, serta doa-doa dari Al-Qur'an. Setiap entri menyertakan teks Arab, transliterasi latin, arti Bahasa Indonesia, dan sumbernya (mis. HR. Tirmidzi atau nomor ayat).",
+    "dhikrNote": "Arti yang ditampilkan bersifat ringkas untuk kemudahan. Untuk pendalaman makna dan keabsahan, silakan merujuk pada mushaf, kitab hadis, serta bimbingan guru/ulama yang terpercaya.",
+    "privacyHeading": "Privasi & data",
+    "privacyBody": "Tanpa login, seluruh data tersimpan di perangkatmu. Dengan login, datamu tersimpan aman di akunmu dan hanya bisa diakses olehmu.",
+    "privacyLink": "Baca Kebijakan Privasi",
+    "techHeading": "Teknologi",
+    "techBody": "Dibangun dengan Next.js, React, dan Tailwind CSS, dengan Supabase untuk autentikasi dan penyimpanan data, serta dukungan PWA agar dapat dipasang dan berjalan offline."
+  },
+  "privacy": {
+    "title": "Kebijakan Privasi",
+    "updated": "Terakhir diperbarui: 28 Juni 2026",
+    "intro": "Privasimu penting. Halaman ini menjelaskan data apa yang dikumpulkan Dhikr Counter, bagaimana digunakan, dan pilihan yang kamu miliki.",
+    "sections": [
+      { "h": "1. Data yang dikumpulkan", "p": ["Tanpa login (mode tamu): seluruh data — pilihan dzikir, hitungan harian, dan pengaturan — disimpan secara lokal di perangkatmu (localStorage). Kami tidak menerima data ini.", "Dengan login Google: kami menyimpan informasi dasar profil dari Google (nama, email, foto profil) serta data hitungan dzikir harianmu (jenis dzikir, tanggal, dan jumlah)."] },
+      { "h": "2. Bagaimana data disimpan", "p": ["Data akun disimpan di basis data Supabase (PostgreSQL) dengan Row Level Security, sehingga setiap pengguna hanya dapat mengakses datanya sendiri. Data mode tamu tidak pernah meninggalkan perangkatmu kecuali kamu memilih untuk login (saat itu data lokal disinkronkan ke akunmu)."] },
+      { "h": "3. Penggunaan data", "p": ["Data hanya digunakan untuk menjalankan fungsi aplikasi: menampilkan hitungan, menyusun laporan progres, dan menyinkronkan antar-perangkat. Kami tidak menjual, menyewakan, atau menggunakan datamu untuk iklan."] },
+      { "h": "4. Layanan pihak ketiga", "p": ["Google — untuk proses masuk (OAuth). Kami hanya menerima profil dasar sesuai izin yang kamu setujui.", "Supabase — untuk autentikasi dan penyimpanan data."] },
+      { "h": "5. Cookie", "p": ["Kami hanya menggunakan cookie yang diperlukan untuk menjaga sesi login-mu tetap aktif. Tidak ada cookie pelacak untuk iklan."] },
+      { "h": "6. Penyimpanan & penghapusan data", "p": ["Data tamu dapat kamu hapus kapan saja dengan membersihkan data situs di browser. Untuk data akun, kamu dapat keluar (logout) untuk mengakhiri sesi, atau meminta penghapusan seluruh data akun melalui kontak di bawah."] },
+      { "h": "7. Hak kamu", "p": ["Kamu berhak mengakses, memperbaiki, dan meminta penghapusan data pribadimu. Hubungi kami untuk permintaan tersebut."] },
+      { "h": "8. Perubahan kebijakan", "p": ["Kebijakan ini dapat diperbarui sewaktu-waktu. Perubahan akan tercermin pada tanggal “terakhir diperbarui” di atas."] },
+      { "h": "9. Kontak", "p": ["Untuk pertanyaan terkait privasi, hubungi: [alamat email kontak kamu]."] }
+    ]
+  },
+  "terms": {
+    "title": "Ketentuan Layanan",
+    "updated": "Terakhir diperbarui: 28 Juni 2026",
+    "sections": [
+      { "h": "1. Persetujuan", "p": ["Dengan menggunakan Dhikr Counter, kamu dianggap menyetujui ketentuan ini. Jika tidak setuju, mohon untuk tidak menggunakan aplikasi."] },
+      { "h": "2. Tentang layanan", "p": ["Dhikr Counter adalah aplikasi gratis untuk menghitung dzikir dan doa serta memantau progresnya. Layanan disediakan apa adanya tanpa biaya."] },
+      { "h": "3. Konten keagamaan", "p": ["Teks Arab, transliterasi, terjemahan, dan keterangan sumber disediakan untuk kemudahan dan tujuan ibadah pribadi. Meski kami berupaya menjaga ketepatannya, mohon verifikasi pada mushaf, kitab hadis, dan bimbingan ulama yang terpercaya. Aplikasi ini bukan pengganti rujukan ilmu syar'i."] },
+      { "h": "4. Akun & mode tamu", "p": ["Kamu dapat menggunakan aplikasi tanpa akun (data tersimpan di perangkat) atau masuk dengan Google untuk menyinkronkan data. Kamu bertanggung jawab menjaga keamanan akun Google yang kamu gunakan."] },
+      { "h": "5. Penggunaan yang wajar", "p": ["Kamu setuju untuk tidak menyalahgunakan layanan, termasuk upaya mengganggu, meretas, atau mengakses data pengguna lain."] },
+      { "h": "6. Tanpa jaminan", "p": ["Layanan disediakan “sebagaimana adanya” tanpa jaminan apa pun. Kami tidak menjamin layanan akan selalu bebas dari gangguan atau kesalahan."] },
+      { "h": "7. Batasan tanggung jawab", "p": ["Sejauh diizinkan hukum, kami tidak bertanggung jawab atas kerugian yang timbul dari penggunaan atau ketidakmampuan menggunakan aplikasi, termasuk kehilangan data."] },
+      { "h": "8. Perubahan ketentuan", "p": ["Ketentuan ini dapat berubah sewaktu-waktu. Penggunaan yang berlanjut setelah perubahan berarti kamu menerima ketentuan yang diperbarui."] },
+      { "h": "9. Kontak", "p": ["Pertanyaan tentang ketentuan ini? Lihat juga Kebijakan Privasi atau hubungi: [alamat email kontak kamu]."] }
+    ]
+  },
+  "guide": {
+    "title": "Panduan Pemakaian",
+    "subtitle": "Semua yang perlu kamu tahu untuk mulai berdzikir.",
+    "keys": ["Ketuk layar", "↑", "↓", "←", "→", "+", "Spasi", "Enter"],
+    "sections": [
+      { "h": "1. Memilih dzikir", "p": ["Buka aplikasi, lalu pilih dzikir atau doa dari kategori yang tersedia (tasbih harian, Ramadan, rezeki, atau doa Al-Qur'an). Kamu akan masuk ke layar hitung."] },
+      { "h": "2. Menghitung", "p": ["Semua cara di bawah ini menambah satu hitungan — pilih yang paling nyaman.", "Karena bisa pakai keyboard dan ketukan di mana saja pada layar, kamu tetap bisa menghitung dengan khusyuk meski mata terpejam."] },
+      { "h": "3. Target & putaran", "p": ["Tiap dzikir punya target (mis. 33 atau 100). Lingkaran progres terisi mengikuti hitungan, dan saat target tercapai akan ada penanda. Hitungan bisa terus berlanjut ke putaran berikutnya. Ubah target lewat tombol 33 / 100 / 1000 / Lainnya di bagian bawah."] },
+      { "h": "4. Undo & reset", "p": ["Salah pencet? Tekan Undo untuk mengurangi satu. Tombol Reset mengembalikan hitungan sesi ke nol — tenang, ini tidak menghapus total yang sudah masuk ke laporan."] },
+      { "h": "5. Suara & getar", "p": ["Ada umpan balik bunyi dan getar tiap hitungan serta saat target tercapai. Aktif/nonaktifkan lewat ikon di pojok kanan atas layar hitung."] },
+      { "h": "6. Laporan", "p": ["Buka menu Laporan untuk melihat progres harian, mingguan, dan bulanan, lengkap dengan grafik tren dan rincian per dzikir."] },
+      { "h": "7. Pasang sebagai aplikasi (offline)", "p": ["Dhikr Counter adalah PWA — bisa dipasang ke layar utama ponsel atau desktop. Saat banner “Pasang aplikasi” muncul, ketuk Pasang; atau gunakan menu browser (“Add to Home Screen” / “Install”). Setelah terpasang, aplikasi bisa dipakai tanpa internet."] },
+      { "h": "8. Login & sinkronisasi", "p": ["Tanpa login, datamu tersimpan di perangkat. Jika ingin data tersinkron di banyak perangkat, masuk dengan Google. Saat login pertama, data lokalmu otomatis digabung dan disinkronkan ke akun."] }
+    ]
+  },
+  "faq": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "subtitle": "Jawaban singkat seputar Dhikr Counter.",
+    "items": [
+      { "q": "Apakah gratis?", "a": "Ya, sepenuhnya gratis dan tanpa iklan." },
+      { "q": "Apakah harus login?", "a": "Tidak. Semua fitur bisa dipakai tanpa akun — datamu tersimpan di perangkat. Login hanya jika ingin sinkron antar-perangkat." },
+      { "q": "Bagaimana privasi data saya?", "a": "Data tamu tersimpan di browser. Data akun dilindungi Row Level Security sehingga hanya kamu yang bisa mengakses. Kami tidak menjual data. Lihat Kebijakan Privasi untuk detailnya." },
+      { "q": "Apakah bisa offline?", "a": "Bisa. Pasang sebagai aplikasi (PWA) dan ia berfungsi tanpa koneksi internet." },
+      { "q": "Bagaimana cara menghitung?", "a": "Ketuk di mana saja pada layar hitung, atau pakai tombol panah, spasi, enter, atau + — semua menambah satu." },
+      { "q": "Apakah teks dan terjemahannya akurat?", "a": "Kami berupaya menjaga ketepatan dan menyertakan sumber, tapi terjemahan dibuat ringkas. Mohon verifikasi pada mushaf, kitab hadis, dan ulama terpercaya." },
+      { "q": "Bisakah mengubah target hitungan?", "a": "Bisa. Di layar hitung pilih 33, 100, 1000, atau atur target khusus." }
+    ]
+  },
+  "contact": {
+    "title": "Kontak",
+    "subtitle": "Kami senang mendengar darimu.",
+    "intro": "Ada pertanyaan, masukan, atau menemukan masalah? Hubungi kami — dan mohon verifikasi juga konten keagamaan pada sumber yang terpercaya.",
+    "emailLabel": "Email",
+    "email": "[alamat email kontak kamu]",
+    "emailCta": "Kirim email",
+    "responseNote": "Kami usahakan membalas secepatnya, insya Allah."
+  },
+  "authError": {
+    "title": "Gagal masuk",
+    "desc": "Terjadi masalah saat proses login. Silakan coba lagi. Datamu di perangkat ini tetap aman.",
+    "back": "Kembali ke Beranda"
+  }
+}
